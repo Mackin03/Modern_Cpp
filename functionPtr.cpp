@@ -1,5 +1,7 @@
 #include <iostream>
 
+typedef int (*PFnIntegerOperations)(int, int);
+
 int add(int x, int y){
     return x+y;
 }
@@ -10,7 +12,8 @@ int multiply(int x, int y){
 
 int main(){
     // function pointer for functions: int name(int,int)
-    int (*op)(int, int);
+    //int (*op)(int, int);
+    PFnIntegerOperations op;
     std::cout << "1 for add or 2 for multiply" << std::endl;
     int n;
     std::cin >> n;
