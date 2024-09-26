@@ -30,7 +30,10 @@ class Golden : public Dog{
 };
 
 class Husky : public Dog{
-
+    public:
+        void Howl(){
+            std::cout << "Awoooo" << std::endl;
+        }
 };
 
 int main() {
@@ -46,6 +49,7 @@ int main() {
     Husky dog2;
     std::cout << "Husky: " ;
     dog2.Bark();
+    dog2.Howl();
 
     std::cout << "size of Dog: " << sizeof(Dog) << std::endl;
     std::cout <<"size of Golden: " << sizeof(Golden) << std::endl;
